@@ -1,0 +1,8 @@
+[
+  {
+    "id": "sms-boiler-001",
+    "out": "dist/sms-boiler-001.md",
+    "source": "local_docs/boiler_trip_procedimiento.md",
+    "date": "2025-10-21"
+  }
+]

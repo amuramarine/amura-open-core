@@ -1,0 +1,16 @@
+set -e
+cmd="$1"; shift || true
+case "$cmd" in
+  load)
+    unzip -o "$1" -d data
+    [ -f data/dist/index.json ] && [ ! -f data/index.json ] && cp data/dist/index.json data/index.json
+    echo "Pack loaded into ./data"
+    ;;
+  ask)
+    python3 pybin/ask.py "$@"
+    ;;
+  *)
+    echo "Usage: amura {load|ask}"
+    exit 1
+    ;;
+esac
